@@ -19,10 +19,13 @@ public abstract class Character{
         System.out.println(name + ":HP" + hp);
     }
 
-    public int getHp(){
-        return this.hp;
+    public int getHp() {
+        return hp;
     }
-    public String setName() {
-        return this.name;
+
+    public void setHp(int hp) {
+        if (hp <= 0) {
+            this.hp = hp;
+        }
     }
 }

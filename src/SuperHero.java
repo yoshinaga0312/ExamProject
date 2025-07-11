@@ -1,6 +1,6 @@
 public class SuperHero extends Hero{
-    public SuperHero(){
-        super(name,hp,weapon);
+    public SuperHero(Hero hero) {
+        super(hero.name,hero.hp,hero.weapon);
     }
 
     void attack(Character target) {

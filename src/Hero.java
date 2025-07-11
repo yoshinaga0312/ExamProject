@@ -11,5 +11,22 @@ public class Hero extends Character {
         target.hp -= 10;
     }
 
-    SuperHero superHero = new SuperHero();
+    Hero hero = new Hero(name,hp,weapon);
+    SuperHero superHero = new SuperHero(hero);
+
+    public SuperHero getSuperHero() {
+        return superHero;
+    }
+
+    public void setSuperHero(SuperHero superHero) {
+        this.superHero = superHero;
+    }
+
+    public String getWeapon() {
+        return weapon;
+    }
+
+    public void setWeapon(String weapon) {
+        this.weapon = weapon;
+    }
 }

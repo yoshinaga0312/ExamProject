@@ -21,10 +21,13 @@ public abstract class Monster{
         System.out.println(name + suffix + ":HP" + hp);
     }
 
-    public int getHp(){
-        return this.hp;
+    public int getHp() {
+        return hp;
     }
-    public String setName() {
-        return this.name;
+
+    public void setHp(int hp) {
+        if (hp <= 0) {
+            this.hp = hp;
+        }
     }
 }
