@@ -1,4 +1,4 @@
-public abstract class Character{
+public abstract class Character {
     String name;
     int hp;
 
@@ -7,7 +7,7 @@ public abstract class Character{
         this.hp = hp;
     }
 
-    final boolean isAlive(){
+    final boolean isAlive() {
         if (hp <= 0) {
             return false;
         } else {
@@ -15,7 +15,7 @@ public abstract class Character{
         }
     }
 
-    void showStatus(){
+    void showStatus() {
         System.out.println(name + ":HP" + hp);
     }
 
