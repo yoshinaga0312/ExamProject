@@ -30,13 +30,11 @@ public class GameMaster {
         s.showStatus();
 
         System.out.println("\n味方の総攻撃!");
-       for(int i = 0; i < 1; i++) {
-           for (Monster j : monsters) {
-               h.attack(j);
-               w.attack(j);
-               t.attack(j);
+        for(Character c : characters) {
+           for (Monster mon : monsters) {
+               c.attack(mon);
            }
-       }
+        }
         System.out.println("\n敵の総攻撃!");
 
 
