@@ -30,4 +30,6 @@ public abstract class Character {
             this.hp = hp;
         }
     }
+
+    public abstract void attack(Monster mon);
 }

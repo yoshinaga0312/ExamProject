@@ -36,9 +36,14 @@ public class GameMaster {
            }
         }
         System.out.println("\n敵の総攻撃!");
-
+        for(Monster mon : monsters) {
+            for (Character c : characters) {
+                mon.attack(c);
+            }
+        }
 
         System.out.println("\nダメージを受けた勇者が突然光りだした!");
         System.out.println("勇者はスーパーヒーローに進化した!");
+
     }
 }

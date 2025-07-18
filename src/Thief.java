@@ -4,7 +4,7 @@ public class Thief extends Character{
         this.name = name;
     }
 
-    void attack(Monster target) {
+    public void attack(Monster target) {
         System.out.println(name + "素早く攻撃した!" + target.name + "に5のダメージを与えた!");
         target.hp -= 5;
     }

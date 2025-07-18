@@ -6,7 +6,7 @@ public class Hero extends Character {
         this.name = name;
     }
 
-    void attack(Monster target) {
+    public void attack(Monster target) {
         System.out.println(name + "は" + weapon + "で攻撃!" + target.name + "に10のダメージを与えた!");
         target.hp -= 10;
     }
