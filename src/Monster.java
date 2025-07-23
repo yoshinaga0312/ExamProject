@@ -9,16 +9,17 @@ public abstract class Monster{
         this.suffix = suffix;
     }
 
-    final boolean isAlive(){
+    public String isAlive() {
         if (hp <= 0) {
-            return false;
+            return "討伐済み";
         } else {
-            return true;
+            return "生存";
         }
     }
 
     void showStatus(){
-        System.out.println(name + suffix + ":HP" + hp);
+        int Hp = Math.max(hp, 0);
+        System.out.println(name + suffix + ":HP" + Hp);
     }
 
     public int getHp() {

@@ -2,10 +2,8 @@ import java.util.ArrayList;
 
 public class GameMaster {
     public static void main(String[] args) {
-
-
         ArrayList<Character> characters = new ArrayList<>();
-        Hero h = new Hero("勇者", 100, "銅の剣");
+        Hero h = new Hero("勇者", 100, "剣");
         Wizard w = new Wizard("魔法使い", 60, 20);
         Thief t = new Thief("盗賊", 70);
         characters.add(h);
@@ -44,6 +42,26 @@ public class GameMaster {
 
         System.out.println("\nダメージを受けた勇者が突然光りだした!");
         System.out.println("勇者はスーパーヒーローに進化した!");
+        SuperHero Sp = new SuperHero(h);
+        int index = characters.indexOf(h);
+        characters.set(index,Sp);
+        Sp.attack(m);
+        Sp.attack(g);
+        Sp.attack(s);
 
+        System.out.println("\n---味方パーティ最終ステータス---");
+        h.showStatus();
+        System.out.println("生存状況:" + h.isAlive());
+        w.showStatus();
+        System.out.println("生存状況:" + w.isAlive());
+        t.showStatus();
+        System.out.println("生存状況:" + t.isAlive());
+        System.out.println("\n---敵グループ最終ステータス---");
+        m.showStatus();
+        System.out.println("生存状況:" + m.isAlive());
+        g.showStatus();
+        System.out.println("生存状況:" + g.isAlive());
+        s.showStatus();
+        System.out.println("生存状況:" + s.isAlive());
     }
 }

@@ -9,16 +9,18 @@ public abstract class Character {
         this.hp = hp;
     }
 
-    final boolean isAlive() {
+    public String isAlive() {
         if (hp <= 0) {
-            return false;
+            return "戦闘不能";
         } else {
-            return true;
+            return "生存";
         }
     }
 
+
     void showStatus() {
-        System.out.println(name + ":HP" + hp);
+        int Hp = Math.max(hp, 0);
+        System.out.println(name + ":HP" + Hp);
     }
 
     public int getHp() {
