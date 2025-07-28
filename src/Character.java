@@ -1,8 +1,8 @@
 import java.util.ArrayList;
 
-public abstract class Character {
-    String name;
-    int hp;
+public abstract class Character implements Creature{
+    private String name;
+    private int hp;
 
     public Character(String name, int hp) {
         this.name = name;
@@ -17,11 +17,12 @@ public abstract class Character {
         }
     }
 
-
-    void showStatus() {
+    public void showStatus() {
         int Hp = Math.max(hp, 0);
         System.out.println(name + ":HP" + Hp);
     }
+
+
 
     public int getHp() {
         return hp;
@@ -32,6 +33,4 @@ public abstract class Character {
             this.hp = hp;
         }
     }
-
-    public abstract void attack(Monster mon);
 }

@@ -1,6 +1,6 @@
-public abstract class Monster{
-    String name;
-    int hp;
+public abstract class Monster implements Creature{
+    private String name;
+    private int hp;
     char suffix;
 
     public Monster(String name, int hp, char suffix) {
@@ -17,7 +17,7 @@ public abstract class Monster{
         }
     }
 
-    void showStatus(){
+    public void showStatus(){
         int Hp = Math.max(hp, 0);
         System.out.println(name + suffix + ":HP" + Hp);
     }
@@ -31,6 +31,4 @@ public abstract class Monster{
             this.hp = hp;
         }
     }
-
-    public abstract void attack(Character c);
 }
